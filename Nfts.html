@@ -96,7 +96,8 @@
     <!-- Demo script -->
     <script>
       var themeConfig = {
-        theme: JSON.parse('"light"'),
+        demoMode: JSON.parse("false"),
+        theme: JSON.parse('"dark"'),
         isRTL: JSON.parse("false"),
         isFluid: JSON.parse("true"),
         sidebarBehaviour: JSON.parse('"fixed"'),
@@ -123,7 +124,7 @@
     </script>
 
     <!-- Page Title -->
-    <title>E-commerce Dashboard | Culture</title>
+    <title>Culture | Solar Mining system</title>
   </head>
 
   <body>
@@ -185,7 +186,7 @@
           <!-- Navigation -->
           <ul class="navbar-nav mb-lg-7">
             <li class="nav-item dropdown">
-              <a class="nav-link active" href="#dashboardsCollapse" data-bs-toggle="collapse" role="button" aria-expanded="true" aria-controls="dashboardsCollapse">
+              <a class="nav-link " href="#dashboardsCollapse" data-bs-toggle="collapse" role="button" aria-expanded="true" aria-controls="dashboardsCollapse">
                 <svg viewBox="0 0 24 24" class="nav-link-icon" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M3.753,13.944v8.25h6v-6a1.5,1.5,0,0,1,1.5-1.5h1.5a1.5,1.5,0,0,1,1.5,1.5v6h6v-8.25"
@@ -205,7 +206,7 @@
                     <a href="index.html" class="nav-link"> Onboarding </a>
                   </li>
                   <li class="nav-item">
-                    <a href="home.html" class="nav-link active"> Home </a>
+                    <a href="home.html" class="nav-link"> Home </a>
                   </li>
                   <li class="nav-item">
                     <a href="airdrops.html" class="nav-link"> Airdrops </a>
@@ -251,8 +252,8 @@
                 </ul>
               </div>
             </li>
-           <li class="nav-item">
-              <a class="nav-link" href="Nfts.html">
+            <li class="nav-item">
+              <a class="nav-link active" href="Nfts.html">
                   <svg viewBox="0 0 24 24" class="nav-link-icon" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M20.25,9.75v-3a1.5,1.5,0,0,0-1.5-1.5H8.25V3.75a1.5,1.5,0,0,0-1.5-1.5H2.25a1.5,1.5,0,0,0-1.5,1.5v16.3a1.7,1.7,0,0,0,3.336.438l2.351-9.657A1.5,1.5,0,0,1,7.879,9.75H21.75A1.5,1.5,0,0,1,23.2,11.636l-2.2,9A1.5,1.5,0,0,1,19.55,21.75H2.447" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg>
                   <span>Culture Nfts</span>
                   <span class="badge text-bg-success rounded-pill ms-auto">New</span>
@@ -428,363 +429,171 @@
           </div>
         </div>
       </header>
-      
       <div class="container-fluid">
-        <!-- Title -->
-        <h1 class="h2">Welcome Home</h1>
+        <div class="d-flex align-items-baseline justify-content-between">
+          <!-- Title -->
+          <h1 class="h2">Your Nfts and Badges</h1>
 
-        <div class="row">
-          <div class="col-lg-6 col-xxl-3 d-flex">
-            <!-- Card -->
-            <div class="card border-0 flex-fill w-100">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col">
-                    <!-- Title -->
-                    <h5 class="text-uppercase text-muted fw-semibold mb-2">Your Earnings in $Cowry</h5>
+          <!-- Breadcrumb -->
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+              <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Nfts</li>
+            </ol>
+          </nav>
+        </div>
 
-                    <!-- Subtitle -->
-                    <h2 class="mb-0">2,328</h2>
-                  </div>
+        <div class="row justify-content-center">
+          <div class="col">
+            <div id="priceModalCenter" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="exampleModalCenterTitle">Set Nft Price</h3>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                              <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">How much are you willing to sell</label>
+                                <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text">Don't forget to add a good price don't be greedy.</div>
+                              </div>
+                              <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Stake my earnings</label>
+                              </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+                            <a href="Nfts.html" class="btn btn-primary">Submit</a>
+                        </div>
+                    </div>
                 </div>
-                <!-- / .row -->
-              </div>
-              <div class="card-footer">
-                <div class="row justify-content-between">
-                  <div class="col-auto">
-                    <!-- Label -->
-                    <p class="fs-6 text-muted text-uppercase mb-0">Active devices</p>
-
-                    <!-- Comment -->
-                    <p class="fs-5 fw-bold mb-0">1</p>
-                  </div>
-                  <div class="col text-end text-truncate">
-                    <!-- Label -->
-                    <p class="fs-6 text-muted text-uppercase mb-0">Mining Duration</p>
-
-                    <!-- Comment -->
-                    <p class="fs-5 fw-bold mb-0">4 days</p>
-                  </div>
-                </div>
-                <!-- / .row -->
-              </div>
             </div>
-          </div>
-          <div class="col-lg-6 col-xxl-3 d-flex">
-            <!-- Card -->
-            <div class="card border-0 flex-fill w-100">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col">
-                    <!-- Title -->
-                    <h5 class="text-uppercase text-muted fw-semibold mb-2">Your Stake in $Cowry</h5>
 
-                    <!-- Subtitle -->
-                    <h2 class="mb-0">50,000</h2>
-                  </div>
-                  <div class="col-auto">
-                    <!-- Icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="30" width="30" class="text-primary">
-                      <defs>
-                        <style>
-                          .a {
-                            fill: none;
-                            stroke: currentColor;
-                            stroke-linecap: round;
-                            stroke-linejoin: round;
-                            stroke-width: 1.5px;
-                          }
-                        </style>
-                      </defs>
-                      <title>monitor-graph-line</title>
-                      <polygon class="a" points="15 23.253 9 23.253 9.75 18.753 14.25 18.753 15 23.253" />
-                      <line class="a" x1="6.75" y1="23.253" x2="17.25" y2="23.253" />
-                      <rect class="a" x="0.75" y="0.753" width="22.5" height="18" rx="3" ry="3" />
-                      <path class="a" d="M18.75,5.253H16.717a1.342,1.342,0,0,0-.5,2.588l2.064.825a1.342,1.342,0,0,1-.5,2.587H15.75" />
-                      <line class="a" x1="17.25" y1="5.253" x2="17.25" y2="4.503" />
-                      <line class="a" x1="17.25" y1="12.003" x2="17.25" y2="11.253" />
-                      <path class="a" d="M.75,11.253,4.72,7.284a.749.749,0,0,1,1.06,0L7.72,9.223a.749.749,0,0,0,1.06,0l3.97-3.97" />
-                      <line class="a" x1="0.75" y1="15.753" x2="23.25" y2="15.753" />
-                    </svg>
-                  </div>
+            <div id="MarketplaceModalCenter" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="exampleModalCenterTitle">Are you sure you want to do this ?</h3>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <!-- <div class="modal-body">
+                            <img src="assets/images/culture/nft.jpg" alt="" srcset="" class="rounded mx-auto d-block" style="width:50%;">
+                            <p class="mx-auto">This NFT has been added to your wallet</p>
+                        </div> -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+                            <a href="Balance.html" class="btn btn-primary">Yes, Proceed</a>
+                        </div>
+                    </div>
                 </div>
-                <!-- / .row -->
-              </div>
-              <div class="card-footer">
-                <div class="row justify-content-between">
-                  <div class="col-auto">
-                    <!-- Label -->
-                    <p class="fs-6 text-muted text-uppercase mb-0">APY</p>
-
-                    <!-- Comment -->
-                    <p class="fs-5 fw-bold mb-0">15%</p>
-                  </div>
-                  <div class="col text-end text-truncate">
-                    <!-- Label -->
-                    <p class="fs-6 text-muted text-uppercase mb-0">Staking Duration</p>
-
-                    <!-- Comment -->
-                    <p class="fs-5 fw-bold mb-0">60 days</p>
-                  </div>
-                </div>
-                <!-- / .row -->
-              </div>
             </div>
-          </div>
 
-          <div class="col-lg-6 col-xxl-3 d-flex">
-            <!-- Card -->
-            <div class="card border-0 flex-fill w-100">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col">
-                    <!-- Title -->
-                    <h5 class="text-uppercase text-muted fw-semibold mb-2">Available Culture Nfts</h5>
+            <div class="row row-cols-1 row-cols-md-4 g-4">
 
-                    <!-- Subtitle -->
-                    <h2 class="mb-0">4</h2>
+             <div class="col-6">
+                <div class="card h-100">
+                  <img src="assets/images/culture/nft.jpg" class="card-img-top" alt="Culture Airdrops">
+                  <div class="card-body">
+                    <h5 class="card-title">Culture Nft</h5>
+                    <p class="card-text">This is an airdrop unlocked when you preform different tas and achievements going green</p>
+                    <button type="button" class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#priceModalCenter">
+                        List Nft
+                    </button>
+
+                    <button type="button" class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#priceModalCenter" disabled>
+                        Unlist Nft
+                    </button>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">Nfts Status: Minted</small>
                   </div>
                 </div>
-                <!-- / .row -->
               </div>
-              <div class="card-footer">
-                <div class="row justify-content-between">
-                  <div class="col-auto">
-                    <!-- Label -->
-                    <p class="fs-6 text-muted text-uppercase mb-0">Minted Nfts</p>
-
-                    <!-- Comment -->
-                    <p class="fs-5 fw-bold mb-0">3</p>
+              
+              <div class="col-6">
+                <div class="card h-100">
+                  <img src="assets/images/culture/nft.jpg" class="card-img-top" alt="Culture Airdrops">
+                  <div class="card-body">
+                    <h5 class="card-title">Culture Nft</h5>
+                   <p class="card-text">This is an airdrop unlocked when you preform different tas and achievements going green</p>
+                   <button type="button" class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#priceModalCenter" disabled>
+                        List Nft
+                    </button>
+                    <button type="button" class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#MarketplaceModalCenter">
+                        Unlist Nft
+                    </button>
                   </div>
-                  <div class="col text-end text-truncate">
-                    <!-- Label -->
-                    <p class="fs-6 text-muted text-uppercase mb-0">Listed Nfts</p>
-
-                    <!-- Comment -->
-                    <p class="fs-5 fw-bold mb-0">1</p>
+                  <div class="card-footer">
+                    <small class="text-muted">Nfts Status: Listed</small>
                   </div>
                 </div>
-                <!-- / .row -->
               </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-xxl-3 d-flex">
-            <!-- Card -->
-            <div class="card border-0 bg-primary text-white flex-fill w-100">
-              <div class="card-body">
-                <!-- Title -->
-                <h4 class="text-uppercase fw-semibold mb-2">Total Assets Worth</h4>
 
-                <!-- Subtitle -->
-                <h2 class="mb-0">75,800</h2>
+              <div class="col-6">
+                <div class="card h-100">
+                  <img src="assets/images/culture/nft.jpg" class="card-img-top" alt="Culture Airdrops">
+                  <div class="card-body">
+                    <h5 class="card-title">Culture Nft</h5>
+                    <p class="card-text">This is an airdrop unlocked when you preform different tas and achievements going green</p>
+                    <button type="button" class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#priceModalCenter">
+                        List Nft
+                    </button>
 
-                <!-- Chart -->
-                <div class="chart-container h-70px">
-                  <canvas id="currentBalanceChart"></canvas>
+                    <button type="button" class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#priceModalCenter" disabled>
+                        Unlist Nft
+                    </button>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">Nfts Status: Minted</small>
+                  </div>
                 </div>
               </div>
+              
+              <div class="col-6">
+                <div class="card h-100">
+                  <img src="assets/images/culture/nft.jpg" class="card-img-top" alt="Culture Airdrops">
+                  <div class="card-body">
+                    <h5 class="card-title">Culture Nft</h5>
+                   <p class="card-text">This is an airdrop unlocked when you preform different tas and achievements going green</p>
+                   <button type="button" class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#priceModalCenter" disabled>
+                        List Nft
+                    </button>
+                    <button type="button" class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#MarketplaceModalCenter">
+                        Unlist Nft
+                    </button>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">Nfts Status: Listed</small>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
         <!-- / .row -->
-
-        <div class="row">
-          <div class="col-xxl-9 d-flex">
-            <!-- Card -->
-            <div class="card border-0 flex-fill w-100" data-list='{"valueNames": ["name", "price", "quantity", "amount", {"name": "sales", "attr": "data-sales"}], "page": 5}' id="topSellingProducts">
-              <div class="card-header border-0 card-header-space-between">
-                <!-- Title -->
-                <h2 class="card-header-title h4 text-uppercase">Account activities</h2>
-
-                <!-- Dropdown -->
-                <div class="dropdown">
-                  <a href="javascript: void(0);" class="dropdown-toggle no-arrow text-secondary" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="14" width="14">
-                      <g>
-                        <circle cx="12" cy="3.25" r="3.25" style="fill: currentColor" />
-                        <circle cx="12" cy="12" r="3.25" style="fill: currentColor" />
-                        <circle cx="12" cy="20.75" r="3.25" style="fill: currentColor" />
-                      </g>
-                    </svg>
-                  </a>
-                  <div class="dropdown-menu">
-                    <a href="javascript: void(0);" class="dropdown-item"> Check Wallet </a>
-                    <a href="javascript: void(0);" class="dropdown-item">Check My Nfts</a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Table -->
-              <div class="table-responsive">
-                <table class="table align-middle table-edge table-nowrap mb-0">
-                  <thead class="thead-light">
-                    <tr>
-                      <th>
-                        <a href="javascript: void(0);" class="text-muted list-sort" data-sort="name"> Name </a>
-                      </th>
-                      <th class="text-end">
-                        <a href="javascript: void(0);" class="text-muted list-sort" data-sort="price"> Description </a>
-                      </th>
-                      <th class="text-end">
-                        <a href="javascript: void(0);" class="text-muted list-sort" data-sort="amount">Time</a>
-                      </th>
-                      <th class="text-end pe-7 min-w-200px">
-                        <a href="javascript: void(0);" class="text-muted list-sort" data-sort="sales">Progress</a>
-                      </th>
-                    </tr>
-                  </thead>
-
-                  <tbody class="list">
-                    <tr>
-                      <td class="name fw-bold">Account Setup</td>
-                      <td class="price text-end">devices added  and Kyc completed</td>
-                      <td class="amount text-end">10:30am</td>
-                      <td class="sales" data-sales="81">
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div class="progress d-flex flex-grow-1">
-                            <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="81" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-                          <span class="ms-3 text-muted">100%</span>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="name fw-bold">Airdrops Clamed</td>
-                      <td class="price text-end">Daily $Cowry earned</td>
-                      <td class="amount text-end">11:10pm</td>
-                      <td class="sales" data-sales="25">
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div class="progress w-100">
-                            <div class="progress-bar bg-dark" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-                          <span class="ms-3 text-muted">15%</span>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="name fw-bold">Nfts Listed</td>
-                      <td class="price text-end">Nfts listed to our marketplace</td>
-                      <td class="amount text-end">1:30pm</td>
-                      <td class="sales" data-sales="41">
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div class="progress w-100">
-                            <div class="progress-bar bg-dark" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-                          <span class="ms-3 text-muted">25%</span>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="name fw-bold">Nfts Minted</td>
-                      <td class="price text-end">Calmed Nfts for different achievements</td>
-                      <td class="amount text-end">1:30pm</td>
-                      <td class="sales" data-sales="62">
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div class="progress w-100">
-                            <div class="progress-bar" role="progressbar" style="width: 62%" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-                          <span class="ms-3 text-muted">62%</span>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="name fw-bold">Stake Locked</td>
-                      <td class="price text-end">50,000 $Cowry</td>
-                      <td class="amount text-end">9:00am</td>
-                      <td class="sales" data-sales="36">
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div class="progress w-100">
-                            <div class="progress-bar bg-dark" role="progressbar" style="width: 5%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-                          <span class="ms-3 text-muted">5%</span>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <!-- / .table-responsive -->
-            </div>
-          </div>
-          <div class="col-xxl-3 d-flex">
-            <!-- Card -->
-            <div class="card border-0 flex-fill w-100">
-              <div class="card-header border-0 border-0 card-header-space-between">
-                <!-- Title -->
-                <h2 class="card-header-title h4 text-uppercase">Connected Devices</h2>
-
-                <!-- Link -->
-                <a href="javascript: void(0);" class="small fw-bold"> Refresh </a>
-              </div>
-
-              <!-- Table -->
-              <div class="table-responsive">
-                <table class="table table-sm table-borderless align-middle mb-0">
-                  <thead class="thead-light">
-                    <tr>
-                      <th>Device name</th>
-                      <th class="text-end">Amount Mined</th>
-                    </tr>
-                  </thead>
-
-                  <tbody>
-                    <tr>
-                      <td>
-                        <div class="d-flex align-items-center">
-                          <div class="d-flex flex-column">
-                            <span class="fw-bold d-block">Solar at Work</span>
-                            <span class="fs-6 text-muted">active</span>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="text-end">
-                        <div class="fw-bold">1,200 $Cowry</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="d-flex align-items-center">
-                          <div class="d-flex flex-column">
-                            <span class="fw-bold d-block">Solar at home</span>
-                            <span class="fs-6 text-muted">inactive</span>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="text-end">
-                        <div class="fw-bold">1,000 $Cowry</div>
-                      </td>
-                    </tr>
-                    
-                  </tbody>
-                </table>
-              </div>
-              <!-- / .table-responsive -->
-            </div>
-          </div>
-        </div>
-        <!-- / .row -->
-
       </div>
       <!-- / .container-fluid -->
-
       <!-- Footer-->
       <!-- Footer -->
       <footer class="mt-auto">
         <div class="container-fluid mt-4 mb-6 text-muted">
           <div class="row justify-content-between">
-            <div class="col">© Culture. 2022 Team Wonder</div>
+            <div class="col">© Culture by Team Wonder.</div>
 
-            <div class="col-auto">v1.0.0</div>
+            <div class="col-auto">v0.1.0</div>
           </div>
           <!-- / .row -->
         </div>
       </footer>
-
     </main>
     <!-- / main -->
 
+    <!-- Theme JS -->
     <script src="assets/js/theme.bundle.js"></script>
   </body>
-
-  <!-- Mirrored from Culture-theme.com/dashboard-ecommerce.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 07 Oct 2022 14:51:01 GMT -->
 </html>
