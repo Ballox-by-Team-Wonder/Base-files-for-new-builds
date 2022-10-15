@@ -203,13 +203,13 @@
               <div class="collapse show" id="dashboardsCollapse">
                 <ul class="nav flex-column">
                   <li class="nav-item">
-                    <a href="index.html" class="nav-link active"> Onboarding </a>
+                    <a href="index.html" class="nav-link"> Onboarding </a>
                   </li>
                   <li class="nav-item">
                     <a href="home.html" class="nav-link"> Home </a>
                   </li>
                   <li class="nav-item">
-                    <a href="airdrops.html" class="nav-link"> Airdrops </a>
+                    <a href="airdrops.html" class="nav-link active"> Airdrops </a>
                   </li>
                   
                 </ul>
@@ -432,310 +432,205 @@
       <div class="container-fluid">
         <div class="d-flex align-items-baseline justify-content-between">
           <!-- Title -->
-          <h1 class="h2">Welcome to Culture</h1>
+          <h1 class="h2">Clam Available Airdrops </h1>
 
           <!-- Breadcrumb -->
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb mb-0">
               <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Onboarding</li>
+              <li class="breadcrumb-item active" aria-current="page">Airdrops</li>
             </ol>
           </nav>
         </div>
 
         <div class="row justify-content-center">
-          <div class="col-lg-10 col-xl-9 col-xxl-7">
-            <form class="needs-validation" novalidate>
-              <ul class="nav nav-pills steps mb-7 mt-n3 w-75 w-xxl-50 mx-auto" id="wizard-tab" role="tablist">
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link active" id="wizardTabOne" data-bs-toggle="pill" data-bs-target="#wizardStepOne" type="button" role="tab" aria-controls="wizardStepOne" aria-selected="true">
-                    1
-                  </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="wizardTabTwo" data-bs-toggle="pill" data-bs-target="#wizardStepTwo" type="button" role="tab" aria-controls="wizardStepTwo" aria-selected="false">
-                    2
-                  </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="wizardTabThree" data-bs-toggle="pill" data-bs-target="#wizardStepThree" type="button" role="tab" aria-controls="wizardStepThree" aria-selected="false">
-                    3
-                  </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="wizardTabFour" data-bs-toggle="pill" data-bs-target="#wizardStepFour" type="button" role="tab" aria-controls="wizardStepFour" aria-selected="false">
-                    4
-                  </button>
-                </li>
-              </ul>
-
-              <div class="tab-content" id="wizard-tabContent">
-                <div class="tab-pane fade show active" id="wizardStepOne" role="tabpanel" aria-labelledby="wizardTabOne">
-                  <!-- Card -->
-                  <div class="card border-0 py-6 px-md-6">
-                    <div class="card-body">
-                      <h2 class="text-center mb-0">Device setup</h2>
-                      <p class="text-secondary text-center">General information about your device</p>
-
-                      <div class="mb-3">
-                        <div class="row">
-                          <div class="col-md">
-                            <label for="projectName" class="form-label">Device Name</label>
-                            <input type="text" class="form-control" id="projectName" placeholder="Your project name" required />
-                            <div class="invalid-feedback">Please add your device name</div>
-                          </div>
-
-                          <div class="col-md">
-                            <label for="owner" class="form-label">Owner Name</label>
-                            <input type="text" class="form-control" id="owner" placeholder="Owner's name" required />
-                            <div class="invalid-feedback">Please add a name</div>
-                          </div>
+          <div class="col">
+            <div id="exampleModalCenter" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="exampleModalCenterTitle">Airdrop Clam Successful</h3>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <!-- / .row -->
-                      </div>
-
-                      <div class="mb-3">
-                        <div class="row">
-                          <div class="col-md">
-                            <label for="projectName" class="form-label">Owner's Address</label>
-                            <input type="text" class="form-control" id="projectName" placeholder="Your address" required />
-                            <div class="invalid-feedback">
-                              Please add your address
-                              <address></address>
-                            </div>
-                          </div>
-
-                          <div class="col-md">
-                            <label for="country" class="form-label">Device type</label>
-                            <select
-                              class="form-select"
-                              id="country"
-                              required
-                              autocomplete="off"
-                              data-select='{"placeholder": "Choose..."}'
-                              data-option-template='<span class="d-flex align-items-center py-2"><span class="avatar avatar-circle avatar-xxs"><img class="avatar-img shadow-sm" src="assets/images/flags/1x1/%5b%5bvalue%5d%5d.html" /></span><span class="text-truncate ms-2">[[text]]</span></span>'
-                              data-item-template='<span class="d-flex align-items-center"><span class="avatar avatar-circle avatar-xxs"><img class="avatar-img shadow-sm" src="assets/images/flags/1x1/%5b%5bvalue%5d%5d.html" /></span><span class="text-truncate ms-2">[[text]]</span></span>'
-                            >
-                              <option value="" label="Device type"></option>
-                              <option value="af">Biogas System</option>
-                              <option value="as">Solar System</option>
-                              <option value="ad">Hydro System</option>
-                              <option value="ao">Wind System</option>
-                            </select>
-                            <div class="invalid-feedback">Please select a device type</div>
-                          </div>
+                        <div class="modal-body">
+                            <p class="mx-auto">This airdrop has been credited into your wallet</p>
                         </div>
-                      </div>
-
-                      <div class="mb-3">
-                        <div class="row">
-                          <div class="col-md">
-                            <label for="owner" class="form-label">Meter No</label>
-                            <input type="text" class="form-control" id="owner" placeholder="Meter no" required />
-                            <div class="invalid-feedback">Please add Meter no</div>
-                          </div>
-
-                          <div class="col-md">
-                            <label for="owner" class="form-label">Referral Code</label>
-                            <input type="text" class="form-control" id="owner" placeholder="Referral Code" required />
-                            <div class="invalid-feedback">Please add Referral Code</div>
-                          </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                            <a href="Balance.html" class="btn btn-primary">View Wallet</a>
                         </div>
-                        <!-- / .row -->
-                      </div>
-
-                      <div class="mb-3">
-                        <div class="form-check form-switch">
-                          <input class="form-check-input" type="checkbox" role="switch" id="private" />
-                          <label class="form-check-label" for="private">This is for my business</label>
-                        </div>
-                      </div>
                     </div>
-
-                    <div class="card-footer">
-                      <div class="d-flex justify-content-between">
-                        <!-- Button -->
-                        <button type="button" class="btn btn-light">Cancel</button>
-
-                        <!-- Button -->
-                        <a class="btn btn-primary" data-toggle="wizard" href="#wizardStepTwo">Next</a>
-                      </div>
-                    </div>
-                  </div>
                 </div>
+            </div>
 
-                <div class="tab-pane fade" id="wizardStepTwo" role="tabpanel" aria-labelledby="wizardTabTwo">
-                  <!-- Card -->
-                  <div class="card border-0 py-6 px-md-6">
-                    <div class="card-body">
-                      <h2 class="text-center mb-0">Verify your identity</h2>
-                      <p class="text-secondary text-center">Lets ensure its you</p>
-
-                      <div class="mb-3">
-                        <div class="row">
-                          <div class="col-md">
-                            <label for="teamLeader" class="form-label">First Name</label>
-                            <input type="text" class="form-control" id="teamLeader" placeholder="your first name" />
-                            <div class="invalid-feedback">Please add your first name</div>
-                          </div>
-
-                          <div class="col-md">
-                            <label for="teamLeaderEmail" class="form-label">Last Name</label>
-                            <input type="email" class="form-control" id="teamLeaderEmail" placeholder="your last name" />
-                            <div class="invalid-feedback">Please add your last name</div>
-                          </div>
+            <div id="NftModalCenter" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="exampleModalCenterTitle">Nft Successful Minted</h3>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <!-- / .row -->
-                      </div>
-
-                      <div class="mb-3">
-                        <div class="row">
-                          <div class="col-md">
-                            <label for="teamLeaderEmail" class="form-label">Address</label>
-                            <input type="email" class="form-control" id="teamLeaderEmail" placeholder="your home address" />
-                            <div class="invalid-feedback">Please add your home address</div>
-                          </div>
-
-                          <div class="col-md">
-                            <label for="teamLeaderEmail" class="form-label">Phone No.</label>
-                            <input type="email" class="form-control" id="teamLeaderEmail" placeholder="your phone number" />
-                            <div class="invalid-feedback">Please add your phone number</div>
-                          </div>
+                        <div class="modal-body">
+                            <img src="assets/images/culture/nft.jpg" alt="" srcset="" class="rounded mx-auto d-block" style="width:50%;">
+                            <p class="mx-auto">This NFT has been added to your wallet</p>
                         </div>
-                        <!-- / .row -->
-                      </div>
-
-                      <div class="mb-3">
-                        <div class="row">
-                          <div class="col-md">
-                            <label for="teamLeaderEmail" class="form-label">Select ID type</label>
-                            <select class="form-select mb-3" aria-label=".form-select-sm example">
-                              <option selected>click here to select</option>
-                              <option value="NIN">NIN</option>
-                              <option value="BVN">BVN</option>
-                              <option value="PVC">PVC</option>
-                            </select>
-                            <div class="invalid-feedback">Please select a valid ID type</div>
-                          </div>
-
-                          <div class="col-md">
-                            <label for="teamLeaderEmail" class="form-label">Enter ID No.</label>
-                            <input type="email" class="form-control" id="teamLeaderEmail" placeholder="Enter the ID number of your chosen ID" />
-                            <div class="invalid-feedback">Please add your id number</div>
-                          </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                            <a href="Balance.html" class="btn btn-primary">View Wallet</a>
                         </div>
-                        <!-- / .row -->
-                      </div>
-
-                      <div class="mb-3">
-                        <label class="form-label">Upload your valid ID</label>
-                        <div class="dropzone text-center px-4 py-6" data-dropzone>
-                          <div class="dz-message">
-                            <img
-                              class="avatar avatar-xxl mb-3"
-                              src="https://d33wubrfki0l68.cloudfront.net/dab0efca2a3dfb58288f0abf1251e668b2f56229/96c61/assets/images/illustrations/upload-illustration.svg"
-                              alt="..."
-                            />
-
-                            <h5 class="mb-4">Drag and drop your file here</h5>
-
-                            <p class="mb-4">or</p>
-
-                            <!-- Button -->
-                            <span class="btn btn-sm btn-gray-300">Browse files</span>
-                          </div>
-                        </div>
-                        <span class="form-text">Please use an image at least 800px x 600px</span>
-                      </div>
                     </div>
-
-                    <div class="card-footer">
-                      <div class="d-flex justify-content-between">
-                        <!-- Button -->
-                        <a class="btn btn-light" data-toggle="wizard" href="#wizardStepOne">Previous</a>
-
-                        <!-- Button -->
-                        <a class="btn btn-primary" data-toggle="wizard" href="#wizardStepThree">Next</a>
-                      </div>
-                    </div>
-                  </div>
                 </div>
+            </div>
 
-                <div class="tab-pane fade" id="wizardStepThree" role="tabpanel" aria-labelledby="wizardTabThree">
-                  <!-- Card -->
-                  <div class="card border-0 py-6 px-md-6">
-                    <div class="card-body">
-                      <h2 class="text-center mb-0">Staking and Wallet Setup</h2>
-                      <p class="text-secondary text-center">Connect and Linked your wallet</p>
+            <div class="row row-cols-1 row-cols-md-4 g-4">
 
-                      <div class="mb-3">
-                        <div class="row">
-                          <div class="col-md">
-                            <div class="card">
-                              <div class="card-body">
-                                <h6 class="card-subtitle mb-1 text-muted text-uppercase">user wallet</h6>
-                                <h2 class="card-title">Wallet Connect</h2>
-                                <p class="card-text">Connect your wallet to cash in your mined rewards</p>
-                                <div class="btn-group">
-                                  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButtonDefault" data-bs-toggle="dropdown" aria-expanded="false">
-                                      Connect Now
-                                  </button>
-
-                                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonDefault">
-                                    <a class="dropdown-item" href="javascript: void(0);">Kelphr</a>
-                                    <a class="dropdown-item" href="javascript: void(0);">Trust Wallet</a>
-                                    <a class="dropdown-item" href="javascript: void(0);">MetaMask</a>
-                                    <a class="dropdown-item" href="javascript: void(0);">Binance</a>
-                                  </div>
-                                </div>
-                                
-                              </div>
-                            </div>
-                          </div>
-
-                        </div>
-                        <!-- / .row -->
-                      </div>
-
-                      <div class="d-flex justify-content-between">
-                        <!-- Button -->
-                        <a class="btn btn-light" data-toggle="wizard" href="#wizardStepTwo">Previous</a>
-
-                        <!-- Button -->
-                        <a class="btn btn-primary" data-toggle="wizard" href="#wizardStepFour">Save</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="tab-pane fade" id="wizardStepFour" role="tabpanel" aria-labelledby="wizardTabFour">
-                  <!-- Card -->
-                  <div class="card border-0 py-6 px-md-6">
-                    <div class="card-body">
-                      <h2 class="text-center mb-0">Congratulations you are all set</h2>
-                      <p class="text-secondary text-center">welcome Change Maker</p>
-
-                      <div class="mb-7">
-                        <div class="row">
-                          <div class="col-md">
-                            <div class="card">
-                              <img src="assets/images/culture/upgrade-illustration.svg" class="card-img-top w-50 mx-auto" alt="..." />
-                              <div class="card-body">
-                                <h3 class="card-title">Time to Start Earnings</h3>
-                                <p class="card-text">Thank you for installing a green energy System from our partner</p>
-                                <a href="airdrop.html" class="btn btn-primary">Proceed to clam your airdrop</a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- / .row -->
-                      </div>
-                    </div>
-                    
+              <div class="col-6">
+                <div class="card h-100">
+                  <img src="assets/images/culture/celo.png" class="card-img-top" alt="Culture Airdrops">
+                  <div class="card-body">
+                    <h5 class="card-title">$Cowry Reward</h5>
+                   <p class="card-text">This is an airdrop unlocked when you preform different tas and achievements going green</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                        Clam Airdrop
+                    </button>
                   </div>
                 </div>
               </div>
-            </form>
+                           <div class="col-6">
+                <div class="card h-100">
+                  <img src="assets/images/culture/nft.jpg" class="card-img-top" alt="Culture Airdrops">
+                  <div class="card-body">
+                    <h5 class="card-title">Culture Nft</h5>
+                    <p class="card-text">This is an airdrop unlocked when you preform different tas and achievements going green</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#NftModalCenter">
+                        Clam Airdrop
+                    </button>
+                  </div>
+                </div>
+              </div>
+                           <div class="col-6">
+                <div class="card h-100">
+                  <img src="assets/images/culture/celo.png" class="card-img-top" alt="Culture Airdrops">
+                  <div class="card-body">
+                    <h5 class="card-title">$Cowry Reward</h5>
+                   <p class="card-text">This is an airdrop unlocked when you preform different tas and achievements going green</p>
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" disabled>
+                        Clam Airdrop
+                    </button>
+                  </div>
+                </div>
+              </div>
+                           <div class="col-6">
+                <div class="card h-100">
+                  <img src="assets/images/culture/celo.png" class="card-img-top" alt="Culture Airdrops">
+                  <div class="card-body">
+                    <h5 class="card-title">$Cowry Reward</h5>
+                   <p class="card-text">This is an airdrop unlocked when you preform different tas and achievements going green</p>
+                   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                        Clam Airdrop
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card h-100">
+                  <img src="assets/images/culture/nft.jpg" class="card-img-top" alt="Culture Airdrops">
+                  <div class="card-body">
+                    <h5 class="card-title">Culture Nft</h5>
+                   <p class="card-text">This is an airdrop unlocked when you preform different tas and achievements going green</p>
+                   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#NftModalCenter" disabled>
+                        Clam Airdrop
+                    </button>
+
+                  </div>
+                </div>
+              </div>
+                           <div class="col-6">
+                <div class="card h-100">
+                  <img src="assets/images/culture/celo.png" class="card-img-top" alt="Culture Airdrops">
+                  <div class="card-body">
+                    <h5 class="card-title">$Cowry Reward</h5>
+                   <p class="card-text">This is an airdrop unlocked when you preform different tas and achievements going green</p>
+                   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" disabled>
+                        Clam Airdrop
+                    </button>
+                  </div>
+                </div>
+              </div>
+                           <div class="col-6">
+                <div class="card h-100">
+                  <img src="assets/images/culture/celo.png" class="card-img-top" alt="Culture Airdrops">
+                  <div class="card-body">
+                    <h5 class="card-title">$Cowry Reward</h5>
+                   <p class="card-text">This is an airdrop unlocked when you preform different tas and achievements going green</p>
+                   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                        Clam Airdrop
+                    </button>
+                  </div>
+                </div>
+              </div>
+                           <div class="col-6">
+                <div class="card h-100">
+                  <img src="assets/images/culture/nft.jpg" class="card-img-top" alt="Culture Airdrops">
+                  <div class="card-body">
+                    <h5 class="card-title">Culture Nft</h5>
+                    <p class="card-text">This is an airdrop unlocked when you preform different tas and achievements going green</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#NftModalCenter">
+                        Clam Airdrop
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card h-100">
+                  <img src="assets/images/culture/celo.png" class="card-img-top" alt="Culture Airdrops">
+                  <div class="card-body">
+                    <h5 class="card-title">$Cowry Reward</h5>
+                   <p class="card-text">This is an airdrop unlocked when you preform different tas and achievements going green</p>
+                   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                        Clam Airdrop
+                    </button>
+                  </div>
+                </div>
+              </div>
+                           <div class="col-6">
+                <div class="card h-100">
+                  <img src="assets/images/culture/celo.png" class="card-img-top" alt="Culture Airdrops">
+                  <div class="card-body">
+                    <h5 class="card-title">$Cowry Reward</h5>
+                   <p class="card-text">This is an airdrop unlocked when you preform different tas and achievements going green</p>
+                   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                        Clam Airdrop
+                    </button>
+                  </div>
+                </div>
+              </div>
+                           <div class="col-6">
+                <div class="card h-100">
+                  <img src="assets/images/culture/celo.png" class="card-img-top" alt="Culture Airdrops">
+                  <div class="card-body">
+                    <h5 class="card-title">$Cowry Reward</h5>
+                   <p class="card-text">This is an airdrop unlocked when you preform different tas and achievements going green</p>
+                   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" disabled>
+                        Clam Airdrop
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card h-100">
+                  <img src="assets/images/culture/nft.jpg" class="card-img-top" alt="Culture Airdrops">
+                  <div class="card-body">
+                    <h5 class="card-title">Culture Nft</h5>
+                    <p class="card-text">This is an airdrop unlocked when you preform different tas and achievements going green</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#NftModalCenter">
+                        Clam Airdrop
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
         <!-- / .row -->
