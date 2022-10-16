@@ -96,8 +96,7 @@
     <!-- Demo script -->
     <script>
       var themeConfig = {
-        demoMode: JSON.parse("false"),
-        theme: JSON.parse('"dark"'),
+        theme: JSON.parse('"light"'),
         isRTL: JSON.parse("false"),
         isFluid: JSON.parse("true"),
         sidebarBehaviour: JSON.parse('"fixed"'),
@@ -124,7 +123,7 @@
     </script>
 
     <!-- Page Title -->
-    <title>Culture | Solar Mining system</title>
+    <title>User Dashboard | Culture</title>
   </head>
 
   <body>
@@ -186,7 +185,7 @@
           <!-- Navigation -->
           <ul class="navbar-nav mb-lg-7">
             <li class="nav-item dropdown">
-              <a class="nav-link active" href="#dashboardsCollapse" data-bs-toggle="collapse" role="button" aria-expanded="true" aria-controls="dashboardsCollapse">
+              <a class="nav-link" href="#dashboardsCollapse" data-bs-toggle="collapse" role="button" aria-expanded="true" aria-controls="dashboardsCollapse">
                 <svg viewBox="0 0 24 24" class="nav-link-icon" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M3.753,13.944v8.25h6v-6a1.5,1.5,0,0,1,1.5-1.5h1.5a1.5,1.5,0,0,1,1.5,1.5v6h6v-8.25"
@@ -203,7 +202,7 @@
               <div class="collapse show" id="dashboardsCollapse">
                 <ul class="nav flex-column">
                   <li class="nav-item">
-                    <a href="index.html" class="nav-link active"> Onboarding </a>
+                    <a href="index.html" class="nav-link"> Onboarding </a>
                   </li>
                   <li class="nav-item">
                     <a href="home.html" class="nav-link"> Home </a>
@@ -215,8 +214,8 @@
                 </ul>
               </div>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link" href="#pagesCollapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="pagesCollapse">
+            <li class="nav-item">
+              <a class="nav-link active" href="Balance.html">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="nav-link-icon" height="18" width="18">
                   <defs>
                     <style>
@@ -235,24 +234,8 @@
                 </svg>
                 <span>Wallet $Cowry</span>
               </a>
-              <div class="collapse" id="pagesCollapse">
-                <ul class="nav flex-column">
-                  <li class="nav-item">
-                    <a href="Balance.html" class="nav-link"> Balance </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="deposit.html" class="nav-link"> Deposit </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="withdraw.html" class="nav-link"> Withdraw </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="stake.html" class="nav-link"> Stake $Cowry</a>
-                  </li>
-                </ul>
-              </div>
             </li>
-            <li class="nav-item">
+           <li class="nav-item">
               <a class="nav-link" href="Nfts.html">
                   <svg viewBox="0 0 24 24" class="nav-link-icon" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M20.25,9.75v-3a1.5,1.5,0,0,0-1.5-1.5H8.25V3.75a1.5,1.5,0,0,0-1.5-1.5H2.25a1.5,1.5,0,0,0-1.5,1.5v16.3a1.7,1.7,0,0,0,3.336.438l2.351-9.657A1.5,1.5,0,0,1,7.879,9.75H21.75A1.5,1.5,0,0,1,23.2,11.636l-2.2,9A1.5,1.5,0,0,1,19.55,21.75H2.447" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg>
                   <span>Culture Nfts</span>
@@ -429,334 +412,526 @@
           </div>
         </div>
       </header>
+      
       <div class="container-fluid">
-        <div class="d-flex align-items-baseline justify-content-between">
-          <!-- Title -->
-          <h1 class="h2">Welcome to Culture</h1>
+        <div id="DeviceModalCenter" class="modal modal-lg fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h3 class="modal-title" id="exampleModalCenterTitle">Add your new device</h3>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="card border-0 py-6 px-md-6">
+                      <div class="card-body">
+                        <h2 class="text-center mb-0">Device setup</h2>
+                        <p class="text-secondary text-center">General information about your device</p>
 
-          <!-- Breadcrumb -->
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb mb-0">
-              <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Onboarding</li>
-            </ol>
-          </nav>
+                        <div class="mb-3">
+                          <div class="row">
+                            <div class="col-md">
+                              <label for="projectName" class="form-label">Name your device</label>
+                              <input type="text" class="form-control" id="projectName" placeholder="Your project name" required />
+                              <div class="invalid-feedback">Please add a name for your device</div>
+                            </div>
+
+                            <div class="col-md">
+                              <label for="owner" class="form-label">Owner Name</label>
+                              <input type="text" class="form-control" id="owner" placeholder="Owner's name" required />
+                              <div class="invalid-feedback">Please add a name</div>
+                            </div>
+                          </div>
+                          <!-- / .row -->
+                        </div>
+
+                        <div class="mb-3">
+                          <div class="row">
+                            <div class="col-md">
+                              <label for="projectName" class="form-label">Owner's Address</label>
+                              <input type="text" class="form-control" id="projectName" placeholder="Your address" required />
+                              <div class="invalid-feedback">
+                                Please add your address
+                                <address></address>
+                              </div>
+                            </div>
+
+                            <div class="col-md">
+                              <label for="country" class="form-label">Device type</label>
+                              <select
+                                class="form-select"
+                                id="country"
+                                required
+                                autocomplete="off"
+                                data-select='{"placeholder": "Choose..."}'
+                                data-option-template='<span class="d-flex align-items-center py-2"><span class="avatar avatar-circle avatar-xxs"><img class="avatar-img shadow-sm" src="assets/images/flags/1x1/%5b%5bvalue%5d%5d.html" /></span><span class="text-truncate ms-2">[[text]]</span></span>'
+                                data-item-template='<span class="d-flex align-items-center"><span class="avatar avatar-circle avatar-xxs"><img class="avatar-img shadow-sm" src="assets/images/flags/1x1/%5b%5bvalue%5d%5d.html" /></span><span class="text-truncate ms-2">[[text]]</span></span>'
+                              >
+                                <option value="" label="Device type"></option>
+                                <option value="af">Biogas System</option>
+                                <option value="as">Solar System</option>
+                                <option value="ad">Hydro System</option>
+                                <option value="ao">Wind System</option>
+                              </select>
+                              <div class="invalid-feedback">Please select a device type</div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="mb-3">
+                          <div class="row">
+                            <div class="col-md">
+                              <label for="owner" class="form-label">Meter No</label>
+                              <input type="text" class="form-control" id="owner" placeholder="Meter no" required />
+                              <div class="invalid-feedback">Please add Meter no</div>
+                            </div>
+
+                            <div class="col-md">
+                              <label for="owner" class="form-label">Referral Code</label>
+                              <input type="text" class="form-control" id="owner" placeholder="Referral Code" required />
+                              <div class="invalid-feedback">Please add Referral Code</div>
+                            </div>
+                          </div>
+                          <!-- / .row -->
+                        </div>
+
+                        <div class="mb-3">
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="private" />
+                            <label class="form-check-label" for="private">This is for my business</label>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+                      <a href="home.html" class="btn btn-primary">Yes, Proceed</a>
+                  </div>
+              </div>
+          </div>
         </div>
 
-        <div class="row justify-content-center">
-          <div class="col-lg-10 col-xl-9 col-xxl-7">
-            <form class="needs-validation" novalidate>
-              <ul class="nav nav-pills steps mb-7 mt-n3 w-75 w-xxl-50 mx-auto" id="wizard-tab" role="tablist">
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link active" id="wizardTabOne" data-bs-toggle="pill" data-bs-target="#wizardStepOne" type="button" role="tab" aria-controls="wizardStepOne" aria-selected="true">
-                    1
-                  </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="wizardTabTwo" data-bs-toggle="pill" data-bs-target="#wizardStepTwo" type="button" role="tab" aria-controls="wizardStepTwo" aria-selected="false">
-                    2
-                  </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="wizardTabThree" data-bs-toggle="pill" data-bs-target="#wizardStepThree" type="button" role="tab" aria-controls="wizardStepThree" aria-selected="false">
-                    3
-                  </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="wizardTabFour" data-bs-toggle="pill" data-bs-target="#wizardStepFour" type="button" role="tab" aria-controls="wizardStepFour" aria-selected="false">
-                    4
-                  </button>
-                </li>
-              </ul>
+        <!-- Title -->
+        <h1 class="h2">Welcome Home</h1>
 
-              <div class="tab-content" id="wizard-tabContent">
-                <div class="tab-pane fade show active" id="wizardStepOne" role="tabpanel" aria-labelledby="wizardTabOne">
-                  <!-- Card -->
-                  <div class="card border-0 py-6 px-md-6">
-                    <div class="card-body">
-                      <h2 class="text-center mb-0">Device setup</h2>
-                      <p class="text-secondary text-center">General information about your device</p>
+        <div class="row">
+          <div class="col-lg-6 col-xxl-3 d-flex">
+            <!-- Card -->
+            <div class="card border-0 flex-fill w-100">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <!-- Title -->
+                    <h5 class="text-uppercase text-muted fw-semibold mb-2">Your Earnings in $Cowry</h5>
 
-                      <div class="mb-3">
-                        <div class="row">
-                          <div class="col-md">
-                            <label for="projectName" class="form-label">Device Name</label>
-                            <input type="text" class="form-control" id="projectName" placeholder="Your project name" required />
-                            <div class="invalid-feedback">Please add your device name</div>
-                          </div>
-
-                          <div class="col-md">
-                            <label for="owner" class="form-label">Owner Name</label>
-                            <input type="text" class="form-control" id="owner" placeholder="Owner's name" required />
-                            <div class="invalid-feedback">Please add a name</div>
-                          </div>
-                        </div>
-                        <!-- / .row -->
-                      </div>
-
-                      <div class="mb-3">
-                        <div class="row">
-                          <div class="col-md">
-                            <label for="projectName" class="form-label">Owner's Address</label>
-                            <input type="text" class="form-control" id="projectName" placeholder="Your address" required />
-                            <div class="invalid-feedback">
-                              Please add your address
-                              <address></address>
-                            </div>
-                          </div>
-
-                          <div class="col-md">
-                            <label for="country" class="form-label">Device type</label>
-                            <select
-                              class="form-select"
-                              id="country"
-                              required
-                              autocomplete="off"
-                              data-select='{"placeholder": "Choose..."}'
-                              data-option-template='<span class="d-flex align-items-center py-2"><span class="avatar avatar-circle avatar-xxs"><img class="avatar-img shadow-sm" src="assets/images/flags/1x1/%5b%5bvalue%5d%5d.html" /></span><span class="text-truncate ms-2">[[text]]</span></span>'
-                              data-item-template='<span class="d-flex align-items-center"><span class="avatar avatar-circle avatar-xxs"><img class="avatar-img shadow-sm" src="assets/images/flags/1x1/%5b%5bvalue%5d%5d.html" /></span><span class="text-truncate ms-2">[[text]]</span></span>'
-                            >
-                              <option value="" label="Device type"></option>
-                              <option value="af">Biogas System</option>
-                              <option value="as">Solar System</option>
-                              <option value="ad">Hydro System</option>
-                              <option value="ao">Wind System</option>
-                            </select>
-                            <div class="invalid-feedback">Please select a device type</div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="mb-3">
-                        <div class="row">
-                          <div class="col-md">
-                            <label for="owner" class="form-label">Meter No</label>
-                            <input type="text" class="form-control" id="owner" placeholder="Meter no" required />
-                            <div class="invalid-feedback">Please add Meter no</div>
-                          </div>
-
-                          <div class="col-md">
-                            <label for="owner" class="form-label">Referral Code</label>
-                            <input type="text" class="form-control" id="owner" placeholder="Referral Code" required />
-                            <div class="invalid-feedback">Please add Referral Code</div>
-                          </div>
-                        </div>
-                        <!-- / .row -->
-                      </div>
-
-                      <div class="mb-3">
-                        <div class="form-check form-switch">
-                          <input class="form-check-input" type="checkbox" role="switch" id="private" />
-                          <label class="form-check-label" for="private">This is for my business</label>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="card-footer">
-                      <div class="d-flex justify-content-between">
-                        <!-- Button -->
-                        <button type="button" class="btn btn-light">Cancel</button>
-
-                        <!-- Button -->
-                        <a class="btn btn-primary" data-toggle="wizard" href="#wizardStepTwo">Next</a>
-                      </div>
-                    </div>
+                    <!-- Subtitle -->
+                    <h2 class="mb-0">2,328</h2>
                   </div>
                 </div>
+                <!-- / .row -->
+              </div>
+              <div class="card-footer">
+                <div class="row justify-content-between">
+                  <div class="col-auto">
+                    <!-- Label -->
+                    <p class="fs-6 text-muted text-uppercase mb-0">Active devices</p>
 
-                <div class="tab-pane fade" id="wizardStepTwo" role="tabpanel" aria-labelledby="wizardTabTwo">
-                  <!-- Card -->
-                  <div class="card border-0 py-6 px-md-6">
-                    <div class="card-body">
-                      <h2 class="text-center mb-0">Verify your identity</h2>
-                      <p class="text-secondary text-center">Lets ensure its you</p>
+                    <!-- Comment -->
+                    <p class="fs-5 fw-bold mb-0">1</p>
+                  </div>
+                  <div class="col text-end text-truncate">
+                    <!-- Label -->
+                    <p class="fs-6 text-muted text-uppercase mb-0">Mining Duration</p>
 
-                      <div class="mb-3">
-                        <div class="row">
-                          <div class="col-md">
-                            <label for="teamLeader" class="form-label">First Name</label>
-                            <input type="text" class="form-control" id="teamLeader" placeholder="your first name" />
-                            <div class="invalid-feedback">Please add your first name</div>
-                          </div>
-
-                          <div class="col-md">
-                            <label for="teamLeaderEmail" class="form-label">Last Name</label>
-                            <input type="email" class="form-control" id="teamLeaderEmail" placeholder="your last name" />
-                            <div class="invalid-feedback">Please add your last name</div>
-                          </div>
-                        </div>
-                        <!-- / .row -->
-                      </div>
-
-                      <div class="mb-3">
-                        <div class="row">
-                          <div class="col-md">
-                            <label for="teamLeaderEmail" class="form-label">Address</label>
-                            <input type="email" class="form-control" id="teamLeaderEmail" placeholder="your home address" />
-                            <div class="invalid-feedback">Please add your home address</div>
-                          </div>
-
-                          <div class="col-md">
-                            <label for="teamLeaderEmail" class="form-label">Phone No.</label>
-                            <input type="email" class="form-control" id="teamLeaderEmail" placeholder="your phone number" />
-                            <div class="invalid-feedback">Please add your phone number</div>
-                          </div>
-                        </div>
-                        <!-- / .row -->
-                      </div>
-
-                      <div class="mb-3">
-                        <div class="row">
-                          <div class="col-md">
-                            <label for="teamLeaderEmail" class="form-label">Select ID type</label>
-                            <select class="form-select mb-3" aria-label=".form-select-sm example">
-                              <option selected>click here to select</option>
-                              <option value="NIN">NIN</option>
-                              <option value="BVN">BVN</option>
-                              <option value="PVC">PVC</option>
-                            </select>
-                            <div class="invalid-feedback">Please select a valid ID type</div>
-                          </div>
-
-                          <div class="col-md">
-                            <label for="teamLeaderEmail" class="form-label">Enter ID No.</label>
-                            <input type="email" class="form-control" id="teamLeaderEmail" placeholder="Enter the ID number of your chosen ID" />
-                            <div class="invalid-feedback">Please add your id number</div>
-                          </div>
-                        </div>
-                        <!-- / .row -->
-                      </div>
-
-                      <div class="mb-3">
-                        <label class="form-label">Upload your valid ID</label>
-                        <div class="dropzone text-center px-4 py-6" data-dropzone>
-                          <div class="dz-message">
-                            <img
-                              class="avatar avatar-xxl mb-3"
-                              src="https://d33wubrfki0l68.cloudfront.net/dab0efca2a3dfb58288f0abf1251e668b2f56229/96c61/assets/images/illustrations/upload-illustration.svg"
-                              alt="..."
-                            />
-
-                            <h5 class="mb-4">Drag and drop your file here</h5>
-
-                            <p class="mb-4">or</p>
-
-                            <!-- Button -->
-                            <span class="btn btn-sm btn-gray-300">Browse files</span>
-                          </div>
-                        </div>
-                        <span class="form-text">Please use an image at least 800px x 600px</span>
-                      </div>
-                    </div>
-
-                    <div class="card-footer">
-                      <div class="d-flex justify-content-between">
-                        <!-- Button -->
-                        <a class="btn btn-light" data-toggle="wizard" href="#wizardStepOne">Previous</a>
-
-                        <!-- Button -->
-                        <a class="btn btn-primary" data-toggle="wizard" href="#wizardStepThree">Next</a>
-                      </div>
-                    </div>
+                    <!-- Comment -->
+                    <p class="fs-5 fw-bold mb-0">4 days</p>
                   </div>
                 </div>
+                <!-- / .row -->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-xxl-3 d-flex">
+            <!-- Card -->
+            <div class="card border-0 flex-fill w-100">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <!-- Title -->
+                    <h5 class="text-uppercase text-muted fw-semibold mb-2">Your Stake in $Cowry</h5>
 
-                <div class="tab-pane fade" id="wizardStepThree" role="tabpanel" aria-labelledby="wizardTabThree">
-                  <!-- Card -->
-                  <div class="card border-0 py-6 px-md-6">
-                    <div class="card-body">
-                      <h2 class="text-center mb-0">Staking and Wallet Setup</h2>
-                      <p class="text-secondary text-center">Connect and Linked your wallet</p>
-
-                      <div class="mb-3">
-                        <div class="row">
-                          <div class="col-md">
-                            <div class="card">
-                              <div class="card-body">
-                                <h6 class="card-subtitle mb-1 text-muted text-uppercase">user wallet</h6>
-                                <h2 class="card-title">Wallet Connect</h2>
-                                <p class="card-text">Connect your wallet to cash in your mined rewards</p>
-                                <div class="btn-group">
-                                  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButtonDefault" data-bs-toggle="dropdown" aria-expanded="false">
-                                      Connect Now
-                                  </button>
-
-                                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonDefault">
-                                    <a class="dropdown-item" href="javascript: void(0);">Kelphr</a>
-                                    <a class="dropdown-item" href="javascript: void(0);">Trust Wallet</a>
-                                    <a class="dropdown-item" href="javascript: void(0);">MetaMask</a>
-                                    <a class="dropdown-item" href="javascript: void(0);">Binance</a>
-                                  </div>
-                                </div>
-                                
-                              </div>
-                            </div>
-                          </div>
-
-                        </div>
-                        <!-- / .row -->
-                      </div>
-
-                      <div class="d-flex justify-content-between">
-                        <!-- Button -->
-                        <a class="btn btn-light" data-toggle="wizard" href="#wizardStepTwo">Previous</a>
-
-                        <!-- Button -->
-                        <a class="btn btn-primary" data-toggle="wizard" href="#wizardStepFour">Save</a>
-                      </div>
-                    </div>
+                    <!-- Subtitle -->
+                    <h2 class="mb-0">50,000</h2>
+                  </div>
+                  <div class="col-auto">
+                    <!-- Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="30" width="30" class="text-primary">
+                      <defs>
+                        <style>
+                          .a {
+                            fill: none;
+                            stroke: currentColor;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-width: 1.5px;
+                          }
+                        </style>
+                      </defs>
+                      <title>monitor-graph-line</title>
+                      <polygon class="a" points="15 23.253 9 23.253 9.75 18.753 14.25 18.753 15 23.253" />
+                      <line class="a" x1="6.75" y1="23.253" x2="17.25" y2="23.253" />
+                      <rect class="a" x="0.75" y="0.753" width="22.5" height="18" rx="3" ry="3" />
+                      <path class="a" d="M18.75,5.253H16.717a1.342,1.342,0,0,0-.5,2.588l2.064.825a1.342,1.342,0,0,1-.5,2.587H15.75" />
+                      <line class="a" x1="17.25" y1="5.253" x2="17.25" y2="4.503" />
+                      <line class="a" x1="17.25" y1="12.003" x2="17.25" y2="11.253" />
+                      <path class="a" d="M.75,11.253,4.72,7.284a.749.749,0,0,1,1.06,0L7.72,9.223a.749.749,0,0,0,1.06,0l3.97-3.97" />
+                      <line class="a" x1="0.75" y1="15.753" x2="23.25" y2="15.753" />
+                    </svg>
                   </div>
                 </div>
+                <!-- / .row -->
+              </div>
+              <div class="card-footer">
+                <div class="row justify-content-between">
+                  <div class="col-auto">
+                    <!-- Label -->
+                    <p class="fs-6 text-muted text-uppercase mb-0">APY</p>
 
-                <div class="tab-pane fade" id="wizardStepFour" role="tabpanel" aria-labelledby="wizardTabFour">
-                  <!-- Card -->
-                  <div class="card border-0 py-6 px-md-6">
-                    <div class="card-body">
-                      <h2 class="text-center mb-0">Congratulations you are all set</h2>
-                      <p class="text-secondary text-center">welcome Change Maker</p>
-
-                      <div class="mb-7">
-                        <div class="row">
-                          <div class="col-md">
-                            <div class="card">
-                              <img src="assets/images/culture/upgrade-illustration.svg" class="card-img-top w-50 mx-auto" alt="..." />
-                              <div class="card-body">
-                                <h3 class="card-title">Time to Start Earnings</h3>
-                                <p class="card-text">Thank you for installing a green energy System from our partner</p>
-                                <a href="airdrop.html" class="btn btn-primary">Proceed to Claim your airdrop</a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- / .row -->
-                      </div>
-                    </div>
-                    
+                    <!-- Comment -->
+                    <p class="fs-5 fw-bold mb-0">15%</p>
                   </div>
+                  <div class="col text-end text-truncate">
+                    <!-- Label -->
+                    <p class="fs-6 text-muted text-uppercase mb-0">Staking Duration</p>
+
+                    <!-- Comment -->
+                    <p class="fs-5 fw-bold mb-0">60 days</p>
+                  </div>
+                </div>
+                <!-- / .row -->
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-xxl-3 d-flex">
+            <!-- Card -->
+            <div class="card border-0 flex-fill w-100">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <!-- Title -->
+                    <h5 class="text-uppercase text-muted fw-semibold mb-2">Available Culture Nfts</h5>
+
+                    <!-- Subtitle -->
+                    <h2 class="mb-0">4</h2>
+                  </div>
+                </div>
+                <!-- / .row -->
+              </div>
+              <div class="card-footer">
+                <div class="row justify-content-between">
+                  <div class="col-auto">
+                    <!-- Label -->
+                    <p class="fs-6 text-muted text-uppercase mb-0">Minted Nfts</p>
+
+                    <!-- Comment -->
+                    <p class="fs-5 fw-bold mb-0">2</p>
+                  </div>
+                  <div class="col text-end text-truncate">
+                    <!-- Label -->
+                    <p class="fs-6 text-muted text-uppercase mb-0">Listed Nfts</p>
+
+                    <!-- Comment -->
+                    <p class="fs-5 fw-bold mb-0">2</p>
+                  </div>
+                </div>
+                <!-- / .row -->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-xxl-3 d-flex">
+            <!-- Card -->
+            <div class="card border-0 bg-primary text-white flex-fill w-100">
+              <div class="card-body">
+                <!-- Title -->
+                <h4 class="text-uppercase fw-semibold mb-2">Total Assets Worth</h4>
+
+                <!-- Subtitle -->
+                <h2 class="mb-0">75,800</h2>
+
+                <!-- Chart -->
+                <div class="chart-container h-70px">
+                  <canvas id="currentBalanceChart"></canvas>
                 </div>
               </div>
-            </form>
+            </div>
           </div>
         </div>
         <!-- / .row -->
+
+        <div class="col-xxl-9 d-flex">
+          <!-- Card -->
+          <div class="card border-0 flex-fill w-100">
+            <div class="card-header border-0 border-0 card-header-space-between">
+              <!-- Title -->
+              <h2 class="card-header-title h4 text-uppercase">Connected Devices</h2>
+
+              <!-- Link -->
+              <!-- <a href="#DeviceModalCenter" class="small fw-bold">  </a> -->
+              <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#DeviceModalCenter">
+                Add New Device
+              </button>
+                <button type="button" class="btn btn-primary btn-sm mx-1" data-bs-toggle="modal" data-bs-target="#">
+                Refresh
+              </button>
+            </div>
+
+            <!-- Table -->
+            <div class="table-responsive">
+              <table class="table table-sm table-borderless align-middle mb-0">
+                <thead class="thead-light">
+                  <tr>
+                    <th>Name your device</th>
+                    <th class="text-end">Amount Mined $Cowry</th>
+                    <th class="text-end">Configure</th>
+                    <th class="text-end">Performance</th>
+                    <th class="text-end">Last check</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div class="d-flex flex-column">
+                          <span class="fw-bold d-block">Solar at Work</span>
+                          <span class="fs-6 text-muted">active</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="text-end">
+                      <div class="fw-bold">1,200</div>
+                    </td>
+                    <td class="text-end">
+                      <div class="btn-group">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButtonPrimary" data-bs-toggle="dropdown" aria-expanded="false">
+                            Delete
+                        </button>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonPrimary">
+                            <a class="dropdown-item" href="javascript: void(0);">Disable</a>
+                            <a class="dropdown-item" href="javascript: void(0);">Cancel</a>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="status" data-sales="81">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="progress d-flex flex-grow-1">
+                          <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="81" aria-valuemin="0" aria-valuemax="80"></div>
+                        </div>
+                        <span class="ms-3 text-muted">Good</span>
+                      </div>
+                    </td>
+
+                    <td class="text-end">
+                      <div class="fw-bold">110:50am</div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div class="d-flex flex-column">
+                          <span class="fw-bold d-block">Solar at home</span>
+                          <span class="fs-6 text-muted">inactive</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="text-end">
+                      <div class="fw-bold">1,000</div>
+                    </td>
+                    <td class="text-end">
+                      <div class="btn-group">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButtonPrimary" data-bs-toggle="dropdown" aria-expanded="false">
+                            Activate
+                        </button>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonPrimary">
+                            <a class="dropdown-item" href="javascript: void(0);">Enable</a>
+                            <a class="dropdown-item" href="javascript: void(0);">Cancel</a>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td class="status" data-sales="81">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="progress d-flex flex-grow-1">
+                          <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="81" aria-valuemin="0" aria-valuemax="15"></div>
+                        </div>
+                        <span class="ms-3 text-muted">Poor</span>
+                      </div>
+                    </td>
+
+                    <td class="text-end">
+                      <div class="fw-bold">11:50am</div>
+                    </td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+            <!-- / .table-responsive -->
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xxl-9 d-flex">
+            <!-- Card -->
+            <div class="card border-0 flex-fill w-100" data-list='{"valueNames": ["name", "price", "quantity", "amount", {"name": "sales", "attr": "data-sales"}], "page": 5}' id="topSellingProducts">
+              <div class="card-header border-0 card-header-space-between">
+                <!-- Title -->
+                <h2 class="card-header-title h4 text-uppercase">Transaction History</h2>
+
+                <!-- Dropdown -->
+                <div class="dropdown">
+                  <a href="javascript: void(0);" class="dropdown-toggle no-arrow text-secondary" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="14" width="14">
+                      <g>
+                        <circle cx="12" cy="3.25" r="3.25" style="fill: currentColor" />
+                        <circle cx="12" cy="12" r="3.25" style="fill: currentColor" />
+                        <circle cx="12" cy="20.75" r="3.25" style="fill: currentColor" />
+                      </g>
+                    </svg>
+                  </a>
+                  <div class="dropdown-menu">
+                    <a href="Balance.html" class="dropdown-item"> Check Wallet </a>
+                    <a href="Nfts.html" class="dropdown-item">Check My Nfts</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Table -->
+              <div class="table-responsive">
+                <table class="table align-middle table-edge table-nowrap mb-0">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>
+                        <a href="javascript: void(0);" class="text-muted list-sort" data-sort="Transaction"> Transaction </a>
+                      </th>
+                      <th class="text-end">
+                        <a href="javascript: void(0);" class="text-muted list-sort" data-sort="amount"> Amount $Cowry </a>
+                      </th>
+                      <th class="text-end">
+                        <a href="javascript: void(0);" class="text-muted list-sort" data-sort="Time">Time</a>
+                      </th>
+                      <th class="text-end pe-7 min-w-200px">
+                        <a href="javascript: void(0);" class="text-muted list-sort" data-sort="status">Status</a>
+                      </th>
+                    </tr>
+                  </thead>
+
+                  <tbody class="list">
+                    <tr>
+                      <td class="name fw-bold">Account Setup</td>
+                      <td class="amount text-end">$0</td>
+                      <td class="Time text-end">10:30am</td>
+                      <td class="status" data-sales="81">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="progress d-flex flex-grow-1">
+                            <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="81" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <span class="ms-3 text-muted">Success</span>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="name fw-bold">Airdrop Claim</td>
+                      <td class="amount text-end">$128</td>
+                      <td class="Time text-end">11:30am</td>
+                      <td class="status" data-sales="81">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="progress d-flex flex-grow-1">
+                            <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="81" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <span class="ms-3 text-muted">Success</span>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="name fw-bold">Deposit</td>
+                      <td class="amount text-end">$50,000</td>
+                      <td class="Time text-end">12:30pm</td>
+                      <td class="status" data-sales="81">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="progress d-flex flex-grow-1">
+                            <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="81" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <span class="ms-3 text-muted">Success</span>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="name fw-bold">Staking</td>
+                      <td class="amount text-end">$50,000</td>
+                      <td class="Time text-end">12:30pm</td>
+                      <td class="status" data-sales="81">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="progress d-flex flex-grow-1">
+                            <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="81" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <span class="ms-3 text-muted">Success</span>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="name fw-bold">Nft Claim</td>
+                      <td class="amount text-end">$500</td>
+                      <td class="Time text-end">11:30am</td>
+                      <td class="status" data-sales="81">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="progress d-flex flex-grow-1">
+                            <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="81" aria-valuemin="0" aria-valuemax="15"></div>
+                          </div>
+                          <span class="ms-3 text-muted">Failed</span>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- / .table-responsive -->
+            </div>
+          </div>
+          
+        </div>
+        <!-- / .row -->
+
       </div>
       <!-- / .container-fluid -->
+
       <!-- Footer-->
       <!-- Footer -->
       <footer class="mt-auto">
         <div class="container-fluid mt-4 mb-6 text-muted">
           <div class="row justify-content-between">
-            <div class="col">© Culture by Team Wonder.</div>
+            <div class="col">© Culture. 2022 Team Wonder</div>
 
-            <div class="col-auto">v0.1.0</div>
+            <div class="col-auto">v1.0.0</div>
           </div>
           <!-- / .row -->
         </div>
       </footer>
+
     </main>
     <!-- / main -->
 
-    <!-- Theme JS -->
     <script src="assets/js/theme.bundle.js"></script>
   </body>
+
+  <!-- Mirrored from Culture-theme.com/dashboard-ecommerce.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 07 Oct 2022 14:51:01 GMT -->
 </html>
