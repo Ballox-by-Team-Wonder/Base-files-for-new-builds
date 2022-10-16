@@ -659,131 +659,151 @@
 
                 <!-- Subtitle -->
                 <h2 class="mb-0">75,800</h2>
-
-                <!-- Chart -->
-                <div class="chart-container h-70px">
-                  <canvas id="currentBalanceChart"></canvas>
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <!-- / .row -->
 
-        <div class="col-xxl-9 d-flex">
-          <!-- Card -->
-          <div class="card border-0 flex-fill w-100">
-            <div class="card-header border-0 border-0 card-header-space-between">
-              <!-- Title -->
-              <h2 class="card-header-title h4 text-uppercase">Connected Devices</h2>
-
-              <!-- Link -->
-              <!-- <a href="#DeviceModalCenter" class="small fw-bold">  </a> -->
-              <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#DeviceModalCenter">
-                Add New Device
-              </button>
-                <button type="button" class="btn btn-primary btn-sm mx-1" data-bs-toggle="modal" data-bs-target="#">
-                Refresh
-              </button>
+        <div class="row">
+          <div class="col-xxl-3 d-flex">
+            <!-- Card -->
+            <div class="card border-0 flex-fill w-100">
+              <div class="card-header border-0 border-0 card-header-space-between">
+                <!-- Title -->
+                <h2 class="card-header-title h4 text-uppercase">Payments</h2>
+                <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                  <button type="button" class="btn btn-dark">Deposit</button>
+                  <button type="button" class="btn btn-dark">Withdraw</button>
+                  <button type="button" class="btn btn-dark">Stake</button>
+                  <button type="button" class="btn btn-dark">Button</button>
+                  <button type="button" class="btn btn-dark">Button</button>
+                  <button type="button" class="btn btn-dark">Button</button>
+                </div>
+              </div>
             </div>
+          </div> 
+          
+          
+          <div class="col-xxl-9 d-flex">
+            <!-- Card -->
+            <div class="card border-0 flex-fill w-100">
+              <div class="card-header border-0 border-0 card-header-space-between">
+                <!-- Title -->
+                <h2 class="card-header-title h4 text-uppercase">Connected Devices</h2>
 
-            <!-- Table -->
-            <div class="table-responsive">
-              <table class="table table-sm table-borderless align-middle mb-0">
-                <thead class="thead-light">
-                  <tr>
-                    <th>Name your device</th>
-                    <th class="text-end">Amount Mined $Cowry</th>
-                    <th class="text-end">Configure</th>
-                    <th class="text-end">Performance</th>
-                    <th class="text-end">Last check</th>
-                  </tr>
-                </thead>
+                <!-- Link -->
+                <!-- <a href="#DeviceModalCenter" class="small fw-bold">  </a> -->
+                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#DeviceModalCenter">
+                  Add New Device
+                </button>
+                  <button type="button" class="btn btn-primary btn-sm mx-1" data-bs-toggle="modal" data-bs-target="#">
+                  Refresh
+                </button>
+              </div>
 
-                <tbody>
-                  <tr>
-                    <td>
-                      <div class="d-flex align-items-center">
-                        <div class="d-flex flex-column">
-                          <span class="fw-bold d-block">Solar at Work</span>
-                          <span class="fs-6 text-muted">active</span>
+              <!-- Table -->
+              <div class="table-responsive">
+                <table class="table table-sm table-borderless align-middle mb-0">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>Name your device</th>
+                      <th class="text-end">Amount Mined $Cowry</th>
+                      <th class="text-end">Configure</th>
+                      <th class="text-end">Performance</th>
+                      <th class="text-end">Last check</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <div class="d-flex flex-column">
+                            <span class="fw-bold d-block">Solar at Work</span>
+                            <span class="fs-6 text-muted">active</span>
+                          </div>
                         </div>
-                      </div>
-                    </td>
-                    <td class="text-end">
-                      <div class="fw-bold">1,200</div>
-                    </td>
-                    <td class="text-end">
-                      <div class="btn-group">
-                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButtonPrimary" data-bs-toggle="dropdown" aria-expanded="false">
-                            Delete
-                        </button>
+                      </td>
+                      <td class="text-end">
+                        <div class="fw-bold">1,200</div>
+                      </td>
+                      <td class="text-end">
+                        <div class="btn-group">
+                          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButtonPrimary" data-bs-toggle="dropdown" aria-expanded="false">
+                              Delete
+                          </button>
 
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonPrimary">
-                            <a class="dropdown-item" href="javascript: void(0);">Disable</a>
-                            <a class="dropdown-item" href="javascript: void(0);">Cancel</a>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonPrimary">
+                              <a class="dropdown-item" href="javascript: void(0);">Disable</a>
+                              <a class="dropdown-item" href="javascript: void(0);">Cancel</a>
+                          </div>
                         </div>
-                      </div>
-                    </td>
-                    <td class="status" data-sales="81">
-                      <div class="d-flex justify-content-between align-items-center">
-                        <div class="progress d-flex flex-grow-1">
-                          <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="81" aria-valuemin="0" aria-valuemax="80"></div>
+                      </td>
+                      <td class="status" data-sales="81">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="progress d-flex flex-grow-1">
+                            <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="81" aria-valuemin="0" aria-valuemax="80"></div>
+                          </div>
+                          <span class="ms-3 text-muted">Good</span>
                         </div>
-                        <span class="ms-3 text-muted">Good</span>
-                      </div>
-                    </td>
+                      </td>
 
-                    <td class="text-end">
-                      <div class="fw-bold">110:50am</div>
-                    </td>
-                  </tr>
+                      <td class="text-end">
+                        <div class="fw-bold">11:50am</div>
+                      </td>
+                    </tr>
 
-                  <tr>
-                    <td>
-                      <div class="d-flex align-items-center">
-                        <div class="d-flex flex-column">
-                          <span class="fw-bold d-block">Solar at home</span>
-                          <span class="fs-6 text-muted">inactive</span>
+                    <tr>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <div class="d-flex flex-column">
+                            <span class="fw-bold d-block">Solar at home</span>
+                            <span class="fs-6 text-muted">inactive</span>
+                          </div>
                         </div>
-                      </div>
-                    </td>
-                    <td class="text-end">
-                      <div class="fw-bold">1,000</div>
-                    </td>
-                    <td class="text-end">
-                      <div class="btn-group">
-                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButtonPrimary" data-bs-toggle="dropdown" aria-expanded="false">
-                            Activate
-                        </button>
+                      </td>
+                      <td class="text-end">
+                        <div class="fw-bold">1,000</div>
+                      </td>
+                      <td class="text-end">
+                        <div class="btn-group">
+                          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButtonPrimary" data-bs-toggle="dropdown" aria-expanded="false">
+                              Activate
+                          </button>
 
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonPrimary">
-                            <a class="dropdown-item" href="javascript: void(0);">Enable</a>
-                            <a class="dropdown-item" href="javascript: void(0);">Cancel</a>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonPrimary">
+                              <a class="dropdown-item" href="javascript: void(0);">Enable</a>
+                              <a class="dropdown-item" href="javascript: void(0);">Cancel</a>
+                          </div>
                         </div>
-                      </div>
-                    </td>
+                      </td>
 
-                    <td class="status" data-sales="81">
-                      <div class="d-flex justify-content-between align-items-center">
-                        <div class="progress d-flex flex-grow-1">
-                          <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="81" aria-valuemin="0" aria-valuemax="15"></div>
+                      <td class="status" data-sales="81">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="progress d-flex flex-grow-1">
+                            <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="81" aria-valuemin="0" aria-valuemax="15"></div>
+                          </div>
+                          <span class="ms-3 text-muted">Poor</span>
                         </div>
-                        <span class="ms-3 text-muted">Poor</span>
-                      </div>
-                    </td>
+                      </td>
 
-                    <td class="text-end">
-                      <div class="fw-bold">11:50am</div>
-                    </td>
-                  </tr>
-                  
-                </tbody>
-              </table>
+                      <td class="text-end">
+                        <div class="fw-bold">11:50am</div>
+                      </td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+              </div>
+              <!-- / .table-responsive -->
             </div>
-            <!-- / .table-responsive -->
           </div>
+
         </div>
+       
+
 
         <div class="row">
           <div class="col-xxl-9 d-flex">
